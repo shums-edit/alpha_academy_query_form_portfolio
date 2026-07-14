@@ -1,0 +1,130 @@
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:url("img5.png") no-repeat center center fixed;
+  background-size:cover;
+  padding:20px 10px;
+  box-sizing:border-box;
+}
+
+/* Main glass card */
+.wrapper{
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.25);
+  padding:22px;
+  border-radius:18px;
+  width:100%;
+  max-width:420px;
+  color:white;
+  box-shadow:0 15px 35px rgba(0,0,0,0.4);
+  box-sizing:border-box;
+  margin:20px auto;
+}
+
+/* two banner images: desktop + mobile */
+.logo-img-desktop,
+.logo-img-phone{
+  width:100%;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:10px;
+}
+.logo-img-desktop{
+  height:95px;
+}
+.logo-img-phone{
+  display:none;
+}
+
+/* title and form */
+.title{
+  text-align:center;
+  font-weight:bold;
+  margin-bottom:12px;
+}
+
+input, textarea{
+  width:100%;
+  padding:10px;
+  margin-bottom:10px;
+  border-radius:6px;
+  border:none;
+  outline:none;
+  box-sizing:border-box;
+}
+
+textarea{ height:70px; }
+
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:6px;
+  background:#25D366;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.admin-btn{ background:#333; margin-top:8px; }
+
+.popup{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:white;
+  color:black;
+  padding:20px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.popup.show{
+  transform:translate(-50%,-50%) scale(1);
+}
+
+/* Glass Footer */
+.footer{
+  margin:15px auto 0;
+  max-width:420px;
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.25);
+  padding:8px 12px;
+  border-radius:12px;
+  color:white;
+  font-size:13px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* only vertically center whole card on larger screens (PC) */
+@media (min-width: 992px){
+  body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+  }
+}
+
+/* PHONE styles */
+@media (max-width: 600px){
+  /* swap banner image on phone */
+  .logo-img-desktop{ display:none; }
+  .logo-img-phone{ display:block; }
+
+  .wrapper{
+    margin-top:10px;
+    margin-bottom:10px;
+    padding:18px;
+  }
+
+  .footer{
+    font-size:12px;
+    padding:6px 10px;
+  }
+}

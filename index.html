@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Enquiry Portal</title>
+
+  <!-- XLSX for Excel export (used in dashboard window) -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- desktop banner -->
+  <img src="banner.jpeg" class="logo-img-desktop" alt="School Banner">
+
+  <!-- phone banner -->
+  <img src="phone.jpeg" class="logo-img-phone" alt="School Banner Mobile">
+
+  <div class="title">🎓 Student Enquiry Portal</div>
+
+  <form id="form">
+
+    <input type="text" id="student" placeholder="Student Name" required>
+    <input type="text" id="phone" placeholder="Phone Number" required>
+    <input type="text" id="father" placeholder="Father Name" required>
+    <input type="text" id="mother" placeholder="Mother Name" required>
+    <input type="text" id="className" placeholder="Class for Admission" required>
+    <textarea id="query" placeholder="Query (optional)"></textarea>
+
+    <button type="submit">Submit via WhatsApp</button>
+
+  </form>
+
+  <button class="admin-btn" onclick="openLogin()">Admin Panel</button>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  Copyright © 2026 Spark Industry. All Rights Reserved
+</div>
+
+<div id="popup" class="popup">✅ Enquiry Sent Successfully!</div>
+
+<!-- Main JS -->
+<script type="module" src="app.js"></script></body>
+</html>
